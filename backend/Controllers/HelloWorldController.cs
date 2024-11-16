@@ -4,10 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 [ApiController]
 public class HelloWorldController : ControllerBase
 {
+
     [HttpGet]
-    public IActionResult Get()
+    public ActionResult<string> HelloWorld()
     {
-        var name = "John";
-        return $"Hello {name};
+        var name = "Patrick";
+        return $"Hello world {name}";
     }
 }
