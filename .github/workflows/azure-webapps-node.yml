@@ -44,7 +44,7 @@ jobs:
         inlineScript: |
           az storage blob upload-batch \
             --account-name azhackdayfrontend16 \
-            --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} \
+            --account-key ${{ secrets.AZUREFLOW }} \
             --destination '$web' \
             --source frontend/dist \
             --overwrite      
