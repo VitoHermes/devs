@@ -38,13 +38,13 @@ jobs:
         path:  frontend/dist
 
     - name: Azure CLI script
-      uses: azure/cli@v2
+      uses: azure/storagevito
       with:
         azcliversion: latest
         inlineScript: |
           az storage blob upload-batch \
-            --account-name storagevito \
-            --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} \
+            --account-name azhackdayfrontend16 \
+            --account-key ${{ secrets.AZUREFLOW }} \
             --destination '$web' \
             --source frontend/dist \
             --overwrite      
